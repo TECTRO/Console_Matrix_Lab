@@ -105,10 +105,10 @@ public class Main {
                 for (int j = 0; j< width; j++)
                 {
                     if(i == foundVal[0][1] && j == foundVal[0][2])
-                        System.out.printf(Colorize(String.valueOf(matrix[i][j]),(byte) 13,(byte) 3) + splitter);
+                        System.out.print(Colorize(String.valueOf(matrix[i][j]), (byte) 13, (byte) 3) + splitter);
                     else
                     if(i == foundVal[1][1] && j == foundVal[1][2])
-                        System.out.printf(Colorize(String.valueOf(matrix[i][j]),(byte) 13,(byte) 9) + splitter);
+                        System.out.print(Colorize(String.valueOf(matrix[i][j]), (byte) 13, (byte) 9) + splitter);
                     else
                     if(i == j && i+j == width-1)
                         Out.print(matrix[i][j] + splitter, Ansi.Attribute.BOLD, Ansi.FColor.MAGENTA, Ansi.BColor.NONE);
@@ -132,12 +132,12 @@ public class Main {
         Runnable DrawMatrixWResults = ()->
         {
             DrawMatrix.run();
-            System.out.printf("min["+ (foundVal[0][2] +1) +"]["+(foundVal[0][1] + 1)+"] = "+foundVal[0][0] + "\n");
-            System.out.printf("max["+ (foundVal[1][2] +1) +"]["+(foundVal[1][1] + 1)+"] = "+foundVal[1][0] + "\n");
-            System.out.printf("\n");
+            System.out.print("min[" + (foundVal[0][2] + 1) + "][" + (foundVal[0][1] + 1) + "] = " + foundVal[0][0] + "\n");
+            System.out.print("max[" + (foundVal[1][2] + 1) + "][" + (foundVal[1][1] + 1) + "] = " + foundVal[1][0] + "\n");
+            System.out.print("\n");
         };
 
-        System.out.printf("Generated matrix\n");
+        System.out.print("Generated matrix\n");
         DrawMatrixWResults.run();
 
         matrix[foundVal[0][1]][foundVal[0][2]] = foundVal[1][0];
